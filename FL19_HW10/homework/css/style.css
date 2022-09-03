@@ -1,0 +1,36 @@
+.name-input {
+  width: fit-content;
+  margin: 5vh auto;
+}
+
+.buttons {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  background-color: rgb(255, 225, 76);
+  padding: 5px;
+  border-radius: 10%;
+  border: 1px solid black;
+}
+
+.main-button {
+  margin: 20vh auto;
+  width: fit-content;
+}
+
+.main-button button {
+  height: 20vw;
+  width: 20vw;
+  margin: auto;
+  border-radius: 50%;
+  font-size: 30px;
+  background-color: rgb(115, 180, 255);
+}
+
+button:hover {
+  cursor: pointer;
+}
