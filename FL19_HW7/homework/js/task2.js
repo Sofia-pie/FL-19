@@ -1,4 +1,5 @@
-// Your code goes here
+/* eslint-disable no-magic-numbers */
+
 
 while (confirm('Do you want to  play a game?')) {
   let rangeMax = 8;
