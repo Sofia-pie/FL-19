@@ -1,0 +1,260 @@
+body {
+  font-family: $font-sourse;
+  margin: 0px;
+}
+
+header {
+  background: $background-image;
+  border-radius: 0 50% 50% 0;
+  height: 100vh;
+  background-size: cover;
+  -webkit-border-radius: 0 50% 50% 0;
+  -moz-border-radius: 0 50% 50% 0;
+  -ms-border-radius: 0 50% 50% 0;
+
+  .main {
+    position: relative;
+    width: 50%;
+    left: 25%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      font-size: 1em;
+      text-align: center;
+      font-family: $font-hind;
+      font-weight: 400;
+      color: #fff;
+      opacity: 80%;
+    }
+    button {
+      text-align: center;
+      padding: 15px 30px;
+      margin: 25px;
+      font-size: 0.7em;
+      color: rgb(124, 124, 124);
+      border: 0.5px solid rgb(94, 94, 94);
+      background-color: transparent;
+    }
+  }
+}
+
+nav {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  padding: 30px;
+
+  padding-bottom: 0px;
+  align-items: center;
+  a {
+    padding: 0px 25px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.tours-section {
+  margin: 10px auto;
+  max-width: 950px;
+
+  h2 {
+    font-size: 38px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  .card {
+    margin: 10px 15px;
+    display: flex;
+    max-height: 600px;
+    box-shadow: 0px 0px 7px 4px rgba(121, 121, 121, 0.7);
+    margin-bottom: 35px;
+  }
+  .card-text {
+    margin: 10px 20px 20px 25px;
+    h3 {
+      color: $h3-color;
+      font-weight: 400;
+      font-size: 32px;
+      text-align: center;
+
+      margin: 0px;
+    }
+    p {
+      color: $p-color;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}
+
+@mixin container($bg-color, $heading) {
+  background-color: $bg-color;
+  .title {
+    color: $heading;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+  }
+}
+
+.review-secton {
+  @include container($revievs-bg, $revievs-heading-color);
+  max-width: 1250px;
+  margin: auto;
+  .review-container {
+    display: flex;
+  }
+  .review-box {
+    display: flex;
+    height: 100px;
+    width: 33%;
+    margin: 0px 5px 15px 15px;
+    padding: 10px;
+    background-color: $revievs-block-bg;
+
+    .review-img {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%;
+    }
+
+    .review-text {
+      color: #fff;
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 12px;
+      margin: 0px;
+    }
+  }
+}
+
+.find-tour {
+  @include container($find-bg, $find-heading-color);
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px 40px;
+  .tour-input {
+    display: flex;
+    justify-content: space-between;
+    .destinaton {
+      .form-item {
+        margin-right: 5px;
+      }
+    }
+    .form-item {
+      width: 100px;
+      color: $find-color;
+      border: none;
+      background-color: transparent;
+      border-bottom: 1px solid $find-color;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  background-color: $footer-bg;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  .title {
+    color: $footer-heading-color;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .folow {
+    padding: 0px 20px 30px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+
+    .socials {
+      display: inline;
+      img {
+        padding-right: 15px;
+        width: 30px;
+      }
+    }
+    .copyright {
+      color: $footer-p;
+      font-size: 12px;
+      margin-top: 25px;
+    }
+  }
+
+  .list-info,
+  .footer-list-nav {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 5px 10px;
+    a {
+      font-size: 12px;
+      color: $footer-links;
+      text-decoration: none;
+    }
+  }
+
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 10px;
+    padding-right: 20px;
+    width: 400px;
+
+    .feedback-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      input {
+        padding: 3px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 3px;
+        background-color: $footer-btn;
+        color: #fff;
+        border: none;
+      }
+    }
+    .title {
+      margin: 15px 0px 5px;
+    }
+    .payment-methods {
+      display: inline-block;
+
+      a {
+        img {
+          margin: 0px 3px 10px;
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
+@mixin card-image($url) {
+  background-image: url($url);
+  display: inline-block;
+  flex: 1 0 33%;
+  background-size: cover;
+}
+
+@each $i, $image in $images {
+  .tours-section .card:nth-child(#{$i}) .card-img {
+    @include card-image(#{$image});
+  }
+}
